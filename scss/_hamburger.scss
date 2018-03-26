@@ -1,0 +1,40 @@
+.hamburger {
+
+    display: none;
+
+    @include mq($tabletPortrait){
+        display: block;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        width: 37px;
+        height: 37px;
+        margin-right: 1em;
+        position: relative;
+        top: -4px;
+        cursor: pointer;
+
+        .hamburger-icon {
+            color: $site-black;
+            line-height: 1;
+            font-size: 3.4em;
+        }
+
+        .hamburger-text {
+            @include hide;
+        }
+
+        .hamburger:focus,
+        .hamburger-icon:focus {
+            outline: none;
+        }
+
+        .hamburger:focus .hamburger-icon {
+            outline: 5px solid rgba($site-blue, 0.7);
+        }
+
+
+    }
+
+}

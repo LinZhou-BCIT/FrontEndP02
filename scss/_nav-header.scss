@@ -1,0 +1,42 @@
+header nav {
+
+    ul {
+        @include flatten(true);
+        display: flex;
+    }
+
+    a {
+        $transition: background-color 0.3s ease;
+        padding: 0 20px;
+        @include plain-link;
+        font-weight: bold;
+        display: block;
+        line-height: $header-height;
+        transition: $transition;
+        #{$hover} {
+            background-color: rgba($site-blue, 0.8);
+            outline: none;
+        }
+    }
+
+    @include mq($tabletPortrait){
+        display: none;
+        width: 100%;
+        $border: 1px solid $site-black;
+
+        ul {
+            display: block;
+        }
+
+        a {
+            border-top: $border;
+            line-height: $header-height - 1px;
+        }
+
+        .show & {
+            display: block;
+        }
+
+    }
+
+}

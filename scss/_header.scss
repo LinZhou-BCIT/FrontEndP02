@@ -1,0 +1,30 @@
+header {
+    $header-height: 60px !global;
+    min-height: $header-height;
+    border-left: 18px solid $site-red;
+    @include flex-layout-row;
+    align-items: center;
+
+    .header-row-01 {
+        @include flex-layout-row;
+        align-items: center;
+    }
+
+    .logo {
+        @include flatten;
+        padding-left: 20px;
+        a {
+            @include plain-link;
+        }
+    }
+
+    @include mq($tabletPortrait){
+        
+        .header-row-01 {
+            width: 100%;
+            height: $header-height;
+        }
+
+    }
+
+}

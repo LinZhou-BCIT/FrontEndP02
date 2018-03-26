@@ -1,0 +1,62 @@
+// Colours
+
+// Site Colours
+$site-black: #0c090d;
+$site-white: white;
+$site-red: #e01a4f;
+$site-orange: #f15946;
+$site-yellow: #f9c22e;
+$site-blue: #53b3cb;
+
+// Text Colors
+$text-dark: $site-black;
+$text-light: $site-white;
+
+// Fonts
+$body-font: 'Open Sans', sans-serif;
+$heading-font: 'Archivo Black', sans-serif;
+// Typographic Defualts
+$line-height: 1.4;
+
+// Layout variables
+
+// Site Width:
+$site-width: 1024px;
+
+// Spacing
+$space: 30;
+$padding: rem($space);
+$half-padding: rem(($space / 2));
+$padding-mobile: rem(($space - 10));
+$half-padding-mobile: rem((($space - 10) / 2));
+
+// Grid Values
+
+// Column Gutter value
+$gutter: 2; // Roughly equivalent to 2%
+
+$one-col: 100%;
+$two-col: colWidth(2);
+$three-col: colWidth(3);
+$four-col: colWidth(4);
+$five-col: colWidth(5);
+$six-col: colWidth(6);
+
+// Media Query Breakpoints
+$desktopMedium: em(1250);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(768);
+$phoneLandscape: em(670);
+$phoneLarge: em(580);
+$phonePortrait: em(420);
+
+// Utility variables
+$hover: '&:hover, &:focus, &:active';
+
+// Aspect Ratios
+$aspect-ratios: (
+    'video': rp(16, 9),
+    'square': rp(1,1),
+    'cinema': rp(21,9),
+    'photo': rp(3,2)
+);
