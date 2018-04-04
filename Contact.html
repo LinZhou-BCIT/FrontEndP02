@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SSD - Contact Information</title>
+    </head>
+    <body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Schedule</a></li>
+            <li><a href="">Students</a></li>
+            <li><a href="">Staff</a></li>
+            <li><a href="">E-Resources</a></li>
+            <li><a href="">Program Overview</a></li>
+            <li><a href="">Course Summaries</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        </nav>
+</header>
+<div>
+    <div>
+        <h3>Helpful Links</h3>
+        <ul>
+            <li>Start your application.</li>
+            <li>Check your application status.</li>
+            <li>Find more information for international students.</li>
+            <li>Find more information about financial aids.</li>
+        </ul>
+        <h3>Contact Information</h3>
+        <table>
+            <tbody>
+                <tr>
+                    <th>For admission and program inquiries:</th>
+                    <td>Phone: 604.412.7788<br/>
+                    Fax: 604.408.0921<br/>
+                    Email: HTP@bcit.ca</td>
+                </tr>
+                <tr>
+                    <th>Mailing address:</th>
+                    <td>HTP Programs<br/>
+                    BCIT Downtown Campus<br/>
+                    350 - 555 Seymour Street<br/>
+                    Vancouver, BC, Canada <br/>
+                    V6B 3H6</td>
+                </tr>
+                <tr>
+                    <th colspan="2"><a href="https://www.bcit.ca/about/downtown.shtml">Campus info, map, and directions</a></th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <form action="ThankyouPopup()" method="post">
+        <div>
+            <label for="firstname">First name</label>
+            <input type="text" name="firstname" id="firstname" maxlength="80" placeholder="First Last" required>
+        </div>
+        <div>
+            <label for="lastname">Last name</label>
+            <input type="text" name="lastname" id="lastname" maxlength="80" placeholder="Last Last" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" maxlength="80" placeholder="email@example.com" required>
+        </div>
+        <div>
+             <label for="phone">Phone</label>
+             <input type="text" name="phone" id="phone" maxlength="30" placeholder="(123) 456 - 7890">
+        </div>
+        <div>
+            <label><input type="radio" name="status" value="CurrentStudent" required> Current Student</label><br>
+            <label><input type="radio" name="status" value="ProsoectiveStudent"> Prosoective Student</label><br>
+            <label><input type="radio" name="status" value="Instructor"> Instructor</label>
+        </div>
+        <div>
+            <label for="comments">Questions or Comments</label>
+            <textarea name="comments" id="comments" rows="5" cols="23" required></textarea>
+        </div>
+        <div class="actions">
+            <input id="submit" type="submit" value="send &raquo; ">
+        </div>
+    </form>
+    
+</div>
+    </body>
+</html>
