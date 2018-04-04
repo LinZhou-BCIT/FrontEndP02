@@ -7,13 +7,14 @@ $site-red: #e01a4f;
 $site-orange: #f15946;
 $site-yellow: #f9c22e;
 $site-blue: #53b3cb;
+$site-gray: #454545;
 $bcit-navy: #003E6B;
 $bcit-orange: #E88910;
 
 // Text Colors
 $text-dark: $site-black;
 $text-light: $site-white;
-$text-med: #454545;
+$text-med: $site-gray;
 
 // Fonts
 $body-font: 'Open Sans', sans-serif;
