@@ -1,17 +1,29 @@
 header nav {
-
+    $nav-height: 32px;
+    $nav-height-mobile: 40px;
+    background-color: $bcit-navy;
+    width: 100%;
     ul {
         @include flatten(true);
         display: flex;
+        justify-content: space-around;
+        padding: 0 10px;
+    }
+
+    li {
+        white-space: nowrap;
     }
 
     a {
         $transition: background-color 0.3s ease;
-        padding: 0 20px;
+        padding: 0 10px;
         @include plain-link;
         font-weight: bold;
+        color: $text-light;
+        text-transform: uppercase;
+        text-align: center;
         display: block;
-        line-height: $header-height;
+        line-height: $nav-height;
         transition: $transition;
         #{$hover} {
             background-color: rgba($site-blue, 0.8);
@@ -20,9 +32,11 @@ header nav {
     }
 
     @include mq($tabletPortrait){
-        display: none;
-        width: 100%;
-        $border: 1px solid $site-black;
+        max-height: 0;
+        transition: max-height 0.3s ease;
+        // display: none;
+        overflow: hidden;
+        $border: 1px solid $site-white;
 
         ul {
             display: block;
@@ -30,11 +44,12 @@ header nav {
 
         a {
             border-top: $border;
-            line-height: $header-height - 1px;
+            line-height: $nav-height-mobile;
         }
 
         .show & {
             display: block;
+            max-height: 300px;
         }
 
     }
