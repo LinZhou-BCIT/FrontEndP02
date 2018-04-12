@@ -1,0 +1,44 @@
+.schedule {
+    padding: em(16);
+    background-color: #eee;
+    .month {
+        padding: em(10) 0;
+        
+        h2 {
+            @include flatten();
+            color: $text-med;
+            text-align: center;
+            padding: em(10) 0;
+        }
+
+        .doW-label-container {
+            display: flex;
+    
+            .doW-label {
+                background-color: $bcit-blue;
+                color: $text-light;
+                text-align: center;
+                font-weight: bold;
+                border-right: $site-white solid 2px;
+                flex: 1;
+            }
+            .doW-label:last-child {
+                border-right: none;
+            }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-auto-rows: em(135);
+            grid-gap: em(2) em(2);
+
+            .grid-placeholder {
+                background-color: $site-white;
+            }
+            .day {
+                background-color: $site-white;
+            }
+        }
+    }
+}
