@@ -3,7 +3,7 @@
     background-color: #eee;
     .month {
         padding: em(10) 0;
-        
+
         h2 {
             @include flatten();
             color: $text-med;
@@ -34,10 +34,27 @@
             grid-gap: em(2) em(2);
 
             .grid-placeholder {
+                // it looks better as empty blocks
                 background-color: $site-white;
             }
             .day {
                 background-color: $site-white;
+                padding: em(16) em(10);
+                display: flex;
+                flex-direction: column;
+                font-size: em(14);
+
+                .date {
+                    color: $bcit-blue;
+                    font-weight: bold;
+                    padding-bottom: em(8);
+                }
+                .course, .notes {
+                    color: $text-med;
+                }
+                .instructor {
+                    color: $bcit-blue;
+                }
             }
         }
     }

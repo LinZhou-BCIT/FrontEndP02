@@ -63,16 +63,16 @@ function generateSchedule(data){
 
         let dayNode = document.createElement('div');
         let dateStr = currentMonthTxt + ' ' + date.getDate() + ', ' + date.getFullYear();
-        let dateSpan = document.createElement('span');
+        let dateSpan = document.createElement('div');
         dateSpan.appendChild(document.createTextNode(dateStr));
         dateSpan.className = "date";
-        let courseSpan = document.createElement('span');
+        let courseSpan = document.createElement('div');
         courseSpan.appendChild(document.createTextNode(day.course));
         courseSpan.className = "course";
-        let notesSpan = document.createElement('span');
+        let notesSpan = document.createElement('div');
         notesSpan.appendChild(document.createTextNode(day.notes));
         notesSpan.className = "notes";
-        let instructorSpan = document.createElement('span');
+        let instructorSpan = document.createElement('div');
         instructorSpan.appendChild(document.createTextNode(day.instructor));
         instructorSpan.className = "instructor";
 
