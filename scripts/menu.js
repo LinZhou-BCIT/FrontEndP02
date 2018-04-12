@@ -1,13 +1,8 @@
 // Show Mobile Menu Script
-(function($){
-
-    'use strict';
-
-    const $body = $('body');
-    const $hamburger = $('.hamburger');
-
-    $hamburger.click(function(){
-        $body.toggleClass('show');
-    });
-
-})(jQuery);
+document.addEventListener("DOMContentLoaded",  function() {
+    let hamburger = document.querySelector('.hamburger');
+    hamburger.onclick = function () {
+        let body = document.querySelector('body');
+        body.classList.toggle('show');
+    }
+});
