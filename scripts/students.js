@@ -10,18 +10,18 @@ document.addEventListener("DOMContentLoaded", function(){
     }).catch( error => console.log("Error fetching data."));
 
     function generateStudents(data) {
-        console.log(data);
+        // console.log(data);
         let rootNode = document.getElementsByClassName('students')[0];
         for (let student of data) {
             let studentNode = document.createElement('div');
             studentNode.className = "student";
-            let fname = document.createElement('div');
+            let fname = document.createElement('p');
             fname.appendChild(document.createTextNode(student.firstname));
             fname.className = "fname";
-            let lname = document.createElement('div');
+            let lname = document.createElement('p');
             lname.appendChild(document.createTextNode(student.lastname));
             lname.className = "lname";
-            let email = document.createElement('div');
+            let email = document.createElement('p');
             email.appendChild(document.createTextNode(student.email));
             email.className = "email";
             let social = document.createElement('ul');

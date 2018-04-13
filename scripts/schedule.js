@@ -67,19 +67,19 @@ document.addEventListener("DOMContentLoaded", function(){
             let dayNode = document.createElement('div');
             let dateStr = currentMonthTxt + ' ' + date.getDate() + ', ' + date.getFullYear();
             let dowStr = dayNamesFull[date.getDay()-1];
-            let dowSpan = document.createElement('div');
+            let dowSpan = document.createElement('p');
             dowSpan.appendChild(document.createTextNode(dowStr));
             dowSpan.className = "dow";
-            let dateSpan = document.createElement('div');
+            let dateSpan = document.createElement('h4');
             dateSpan.appendChild(document.createTextNode(dateStr));
             dateSpan.className = "date";
-            let courseSpan = document.createElement('div');
+            let courseSpan = document.createElement('p');
             courseSpan.appendChild(document.createTextNode(day.course));
             courseSpan.className = "course";
-            let notesSpan = document.createElement('div');
+            let notesSpan = document.createElement('p');
             notesSpan.appendChild(document.createTextNode(day.notes));
             notesSpan.className = "notes";
-            let instructorSpan = document.createElement('div');
+            let instructorSpan = document.createElement('p');
             instructorSpan.appendChild(document.createTextNode(day.instructor));
             instructorSpan.className = "instructor";
     
