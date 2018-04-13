@@ -27,6 +27,7 @@
         }
 
         .doW-label-container {
+            @include flatten(true);
             display: flex;
     
             .doW-label {
@@ -34,7 +35,7 @@
                 color: $text-light;
                 text-align: center;
                 font-weight: bold;
-                border-right: $site-white solid 2px;
+                border-right: $bg-lightgray solid 2px;
                 flex: 1;
             }
             .doW-label:last-child {
