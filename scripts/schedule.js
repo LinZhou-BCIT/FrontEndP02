@@ -92,5 +92,12 @@ document.addEventListener("DOMContentLoaded", function(){
     
             scheduleGridNode.appendChild(dayNode);
         }
+    };
+
+    // toggle view button
+    let toggleBtn = document.querySelector('.view-toggle');
+    let schedule = document.querySelector('.schedule');
+    toggleBtn.onclick = function() {
+        schedule.classList.toggle('list-view');
     }
 });

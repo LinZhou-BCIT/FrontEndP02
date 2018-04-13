@@ -1,9 +1,18 @@
 .schedule {
     padding: em(16);
     background-color: #eee;
-    .month {
-        padding: em(10) 0;
+    .view-toggle {
+        padding: em(10);
+        color: $text-light;
+        background-color: $bcit-blue;
+        text-align: center;
+        border: none;
+        border-radius: em(4);
+        font-size: em(16);
+        font-weight: bold;
+    }
 
+    .month {
         h2 {
             @include flatten();
             color: $text-med;
@@ -57,6 +66,111 @@
                 }
                 .instructor {
                     color: $bcit-blue;
+                }
+            }
+        }
+    }
+
+    &.list-view {
+        .view-toggle {
+            margin-bottom: em(16);
+        }
+        .month { 
+            h2 {
+                color: $text-light;
+                background-color: $bcit-blue;
+                text-align: start;
+                padding: em(4);
+            }
+    
+            .doW-label-container {
+                display: none;
+            }
+    
+            .grid {
+                display: flex;
+                flex-direction: column;
+    
+                .grid-placeholder {
+                    display: none;
+                }
+                .day {
+                    padding: em(6);
+                    flex-direction: row;
+                    
+                    .dow {
+                        display: block;
+                        flex: 2;
+                    }
+                    .date {
+                        color: $text-med;
+                        font-weight: normal;
+                        padding-bottom: 0;
+                        flex: 3;
+                    }
+                    .course{
+                        flex: 5;
+                    } 
+                    .notes {
+                        display: none;
+                    }
+                    .instructor {
+                        flex: 4;
+                    }
+                }
+
+                .day:nth-child(odd) {
+                    background-color: #DEEAEE;
+                }
+            }
+        }
+    }
+
+    @include mq($tabletPortrait){
+        &, &.list-view {         
+            .view-toggle {
+                display: none;
+            }
+        
+            .month {
+                h2 {
+                    color: $text-light;
+                    background-color: $bcit-blue;
+                    text-align: start;
+                    padding: em(4);
+                }
+        
+                .doW-label-container {
+                    display: none;
+                }
+        
+                .grid {
+                    display: flex;
+                    flex-direction: column;
+        
+                    .grid-placeholder {
+                        display: none;
+                    }
+
+                    .day {
+                        padding: em(10);
+                        display: flex;
+                        flex-direction: column;
+                        font-size: em(14);
+        
+                        .dow {
+                            display: block;
+                        }
+                        .date {
+                            color: $bcit-blue;
+                            font-weight: bold;
+                            padding-bottom: 0;
+                        }
+                    }
+
+                    .day:nth-child(odd) {
+                        background-color: #DEEAEE;
+                    }
                 }
             }
         }

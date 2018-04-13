@@ -30,6 +30,9 @@ header nav {
             outline: none;
         }
     }
+    a.current {
+        background-color: rgba($bcit-blue, 0.8);
+    }
 
     @include mq($tabletPortrait){
         max-height: 0;
@@ -45,6 +48,10 @@ header nav {
         a {
             border-top: $border;
             line-height: $nav-height-mobile;
+        }
+
+        li:first-child a {
+            border-top: none;
         }
 
         .show & {
