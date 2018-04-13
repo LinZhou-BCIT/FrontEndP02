@@ -14,6 +14,26 @@
         color: $text-light;
         font-size: em(16);
         font-weight: bold;
+
+        cursor: pointer;
+    }
+
+    .to-top-btn {
+        @include flatten();
+        position: fixed;
+        bottom: em(30); 
+        right: em(30);
+        z-index: 99;
+        width: em(48);
+        height: em(48);
+        border: none;
+        border-radius: em(24);
+        background-color: rgba($bcit-blue, 0.7);
+        color: $site-white;
+        text-transform: uppercase;
+        font-weight: bold; 
+
+        cursor: pointer;
     }
 
     .month {
