@@ -142,7 +142,7 @@
                     padding: rem(6);
                     flex-direction: row;
                                       
-                    &:nth-child(odd) {
+                    &:nth-child(even) {
                         background-color: #DEEAEE;
                     }
                     .dow {
@@ -206,7 +206,7 @@
                         flex-direction: column;
                         font-size: rem(14);
 
-                        &:nth-child(odd) {
+                        &:nth-child(even) {
                             background-color: #DEEAEE;
                         }
                         .dow {

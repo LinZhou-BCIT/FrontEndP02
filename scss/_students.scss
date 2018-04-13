@@ -8,15 +8,18 @@
         @include flatten();
         color: $text-med;
         text-align: center;
+        text-transform: uppercase;
         padding: rem(16) 0;
     }
 
     .list-head {
+        @include flatten(true);
         display: flex;
         padding: rem(6);
+        line-height: $row-height;
         background-color: $bcit-blue;
 
-        div {
+        li {
             color: $text-light;
             font-weight: bold;
         }
@@ -35,7 +38,7 @@
         background-color: $site-white;
         color: $text-med;       
 
-        &:nth-child(odd) {
+        &:nth-of-type(even) {
             background-color: #DEEAEE;
         }
 
