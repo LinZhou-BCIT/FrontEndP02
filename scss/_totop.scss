@@ -1,0 +1,20 @@
+body {
+    .to-top-btn {
+        @include flatten();
+        position: fixed;
+        bottom: rem(30); 
+        right: rem(30);
+        z-index: 99;
+        width: rem(48);
+        height: rem(48);
+        border: none;
+        border-radius: rem(24);
+        background-color: rgba($bcit-blue, 0.7);
+        color: $site-white;
+        text-transform: uppercase;
+        font-weight: bold; 
+        font-size: rem(20);
+
+        cursor: pointer;
+    }
+}

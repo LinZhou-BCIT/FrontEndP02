@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", function(){
                 monthTitleNode.appendChild(document.createTextNode(currentMonthTxt));
     
                 // day of the week labels
-                let daysOfWeekNode = document.createElement('div');
+                let daysOfWeekNode = document.createElement('ul');
                 daysOfWeekNode.className = "doW-label-container";
                 for (let dayName of dayNames) {
-                    let labelNode = document.createElement('div');
+                    let labelNode = document.createElement('li');
                     labelNode.className = "doW-label";
                     labelNode.appendChild(document.createTextNode(dayName));
                     daysOfWeekNode.appendChild(labelNode);
@@ -119,11 +119,5 @@ document.addEventListener("DOMContentLoaded", function(){
     todayBtn.onclick = function() {
         let todayDiv = document.querySelector('.today');
         todayDiv.scrollIntoView({behavior: 'smooth'});
-    }
-
-    let toTopBtn = document.querySelector('.to-top-btn');
-    let header = document.querySelector('header');
-    toTopBtn.onclick = function() {
-        header.scrollIntoView({behavior: 'smooth'});
     }
 });

@@ -1,6 +1,6 @@
 .students {
     padding: rem(16);
-    background-color: #eee;
+    background-color: $bg-lightgray;
     $row-height: rem(36);
     $row-height-mobile: rem(24);
 
@@ -39,7 +39,7 @@
         color: $text-med;       
 
         &:nth-of-type(even) {
-            background-color: #DEEAEE;
+            background-color: $bg-lightblue;
         }
 
         p {

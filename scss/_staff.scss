@@ -1,6 +1,6 @@
 .staff {
     padding: rem(16);
-    background-color: #eee;
+    background-color: $bg-lightgray;
 
     h1 {
         @include flatten();
@@ -70,7 +70,7 @@
             }
 
             .person:nth-of-type(even) {
-                background-color: #DEEAEE;
+                background-color: $bg-lightblue;
             }
         }
     }
