@@ -1,6 +1,6 @@
 header {
-    $title-height: 120px;
-    $title-height-mobile: 90px;
+    $title-height: rem(120);
+    $title-height-mobile: rem(90);
 
     .header-title-row {
         @include flex-layout-row;
@@ -11,7 +11,7 @@ header {
 
     .logo {
         @include flatten;
-        margin-left: 20px;
+        margin-left: rem(20);
         box-shadow: 0 1px 6px 0 rgba(black, 0.25);
 
         img {
@@ -21,7 +21,7 @@ header {
 
     .header-title {
         flex: 1;
-        padding: 0 30px;
+        padding: 0 rem(30);
         .school-name, h1, h2 {
             @include flatten;
         }
@@ -47,11 +47,11 @@ header {
         }
 
         .logo {
-            width: 60px;
+            width: rem(60);
         }
 
         .header-title {
-            padding: 0 20px;
+            padding: 0 rem(20);
             h1, h2{
                 font-size: 1.3em;
             }

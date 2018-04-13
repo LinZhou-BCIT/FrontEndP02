@@ -10,10 +10,10 @@ footer {
             flex: 3;
             p {
                 @include flatten();
-                padding-left: 20px;
-                margin: 15px 0;
-                max-width: 300px;
-                font-size: 14px;
+                padding-left: rem(20);
+                margin: rem(15) 0;
+                max-width: rem(300);
+                font-size: rem(14);
                 line-height: $line-height;
             }
         }
@@ -22,15 +22,15 @@ footer {
             flex: 2;
             ul {
                 @include flatten(true);
-                padding-left: 20px; 
-                margin: 15px 0;
+                padding-left: rem(20); 
+                margin: rem(15) 0;
             }
             a {
                 @include plain-link;
                 color: $text-light;
                 display: block;
-                font-size: 14px;
-                line-height: 22px;
+                font-size: rem(14);
+                line-height: rem(22);
                 #{$hover} {
                     text-decoration: underline;
                 }
@@ -38,18 +38,18 @@ footer {
         }
         h2 {
             @include flatten();
-            padding-left: 20px;
+            padding-left: rem(20);
             text-transform: uppercase;
             font-weight: normal;
             white-space: nowrap;
-            line-height: 42px;
+            line-height: rem(42);
             background-color: #686868;
             font-family: $heading-font-narrow;
         }
 
         .footer-nav2 {
             h2, ul {
-                padding-right: 20px;
+                padding-right: rem(20);
             }
         }
 
@@ -67,6 +67,6 @@ footer {
         @include flatten;
         text-align: center;
         background-color: #323232;
-        line-height: 42px;
+        line-height: rem(42);
     }
 }
