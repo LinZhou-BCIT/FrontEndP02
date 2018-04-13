@@ -1,0 +1,77 @@
+// Data Table styles 
+.overviewTable {
+    // Table Border
+    $table-border: 1px solid $bcit-blue;
+
+    // Table Cell padding
+    $cell-padding: 10px;
+
+    // Table Styles
+    width: $one-col;
+    border: $table-border;
+
+    th, td {
+        text-align: center;
+        padding: $cell-padding;
+        border: $table-border;
+    }
+
+    caption {
+        background-color: $bcit-navy;
+        color: $site-white;
+        padding: $cell-padding;
+        font-size: $body-font;
+        border-right: $table-border;
+        border-left: $table-border;
+        border-top: $table-border;
+    }
+
+    tbody {
+        tr {
+            td:nth-child(odd){
+                background-color: $site-blue;
+            }
+            td:nth-child(even){
+                background-color: $site-white;
+            }
+            &:hover {
+                td:nth-child(odd){
+                    $bgc: rgba($site-blue, 0.9); 
+                    background-color: $bgc;
+                    color: contrast-text-color($bgc);
+                }
+                td:nth-child(even){
+                    $bgc: rgba($site-blue, 0.1); 
+                    background-color: $bgc;
+                    color: contrast-text-color($bgc);
+                }
+            }
+        }
+    }
+
+    @include mq($phoneLandscape) {
+        td {
+            text-align: left;
+        }
+        
+        tbody {
+            tr {
+                td:nth-child(odd){
+                    background-color: $site-blue;
+                }
+                td:nth-child(even){
+                    background-color: $site-white;
+                }
+            }
+            td {
+                display: block;
+                &:before {
+                    display: inline-block;
+                    margin-right: 10px;
+                    font-weight: bold;
+                }
+            }    
+        }          
+    }
+
+}

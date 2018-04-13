@@ -1,0 +1,5 @@
+.overviewContainer {
+    .overview{
+        @include flex-layout-row;
+    }
+}
