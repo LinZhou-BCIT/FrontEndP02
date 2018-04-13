@@ -89,15 +89,35 @@ document.addEventListener("DOMContentLoaded", function(){
             dayNode.appendChild(notesSpan);
             dayNode.appendChild(instructorSpan);
             dayNode.className = "day";
-    
+            
             scheduleGridNode.appendChild(dayNode);
+
+            let today = new Date();
+            today.setHours(0, 0, 0, 0);
+            if (date.getTime() == today.getTime()) {
+                dayNode.classList.add('today');
+            }
         }
     };
 
     // toggle view button
     let toggleBtn = document.querySelector('.view-toggle');
     let schedule = document.querySelector('.schedule');
+    let isList = false;
     toggleBtn.onclick = function() {
         schedule.classList.toggle('list-view');
+        isList = !isList;
+        if (isList) {
+            toggleBtn.textContent = "# Grid View";
+        } else {
+            toggleBtn.textContent = String.fromCharCode(9776) + " List View";
+        }
+    }
+
+    // jump to today
+    let todayBtn = document.querySelector('.today-btn');
+    todayBtn.onclick = function() {
+        let todayDiv = document.querySelector('.today');
+        todayDiv.scrollIntoView({behavior: 'smooth'});
     }
 });

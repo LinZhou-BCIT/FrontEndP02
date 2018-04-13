@@ -1,13 +1,17 @@
 .schedule {
     padding: em(16);
     background-color: #eee;
-    .view-toggle {
-        padding: em(10);
-        color: $text-light;
-        background-color: $bcit-blue;
-        text-align: center;
+    .view-toggle, .today-btn {
+        width: em(120);
+        margin-right: em(8);
+
         border: none;
         border-radius: em(4);
+        background-color: $bcit-blue;
+
+        text-align: center;
+        line-height: em(40);
+        color: $text-light;
         font-size: em(16);
         font-weight: bold;
     }
@@ -47,11 +51,22 @@
                 background-color: $site-white;
             }
             .day {
+                position: relative;
                 background-color: $site-white;
                 padding: em(16) em(10);
                 display: flex;
                 flex-direction: column;
                 font-size: em(14);
+
+                &.today:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    border-width: 0 em(32) em(32) 0;
+                    border-style: solid;
+                    border-color: $site-red #eee;
+                }
 
                 .dow {
                     display: none;
@@ -60,6 +75,10 @@
                     color: $bcit-blue;
                     font-weight: bold;
                     padding-bottom: em(8);
+                }
+
+                &.today .date {
+                    color: $site-red !important;
                 }
                 .course, .notes {
                     color: $text-med;
@@ -97,7 +116,10 @@
                 .day {
                     padding: em(6);
                     flex-direction: row;
-                    
+                                      
+                    &:nth-child(odd) {
+                        background-color: #DEEAEE;
+                    }
                     .dow {
                         display: block;
                         flex: 2;
@@ -119,9 +141,6 @@
                     }
                 }
 
-                .day:nth-child(odd) {
-                    background-color: #DEEAEE;
-                }
             }
         }
     }
@@ -130,6 +149,10 @@
         &, &.list-view {         
             .view-toggle {
                 display: none;
+            }
+
+            .today-btn{
+                margin-bottom: em(16);
             }
         
             .month {
@@ -157,7 +180,10 @@
                         display: flex;
                         flex-direction: column;
                         font-size: em(14);
-        
+
+                        &:nth-child(odd) {
+                            background-color: #DEEAEE;
+                        }
                         .dow {
                             display: block;
                         }
@@ -166,10 +192,6 @@
                             font-weight: bold;
                             padding-bottom: 0;
                         }
-                    }
-
-                    .day:nth-child(odd) {
-                        background-color: #DEEAEE;
                     }
                 }
             }
