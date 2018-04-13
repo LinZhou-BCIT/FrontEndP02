@@ -88,6 +88,11 @@
                     border-color: $site-red #eee;
                 }
 
+                h4, p {
+                    @include flatten();
+                    line-height: 1.4;
+                }
+
                 .dow {
                     display: none;
                 }

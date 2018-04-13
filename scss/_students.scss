@@ -39,7 +39,8 @@
             background-color: #DEEAEE;
         }
 
-        div {
+        p {
+            @include flatten();
             line-height: $row-height;
         }
 
@@ -85,7 +86,7 @@
             flex-direction: column;
             padding: rem(10);
             
-            div, .social li a {
+            p, .social li a {
                 line-height: $row-height-mobile;
             }
         }
