@@ -13,6 +13,7 @@
     padding: $padding;
     @include first-last-el-no-margin;
     border: 1px dotted #ccc;
+    border-radius: rem(8);
     @include mq($phoneLandscape){
         width: $one-col;
         margin-bottom: 8%;

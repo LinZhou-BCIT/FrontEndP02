@@ -1,0 +1,38 @@
+.form {
+    input[type=text], input[type=email], select, textarea {
+        width: 100%;
+        $padding: rem(16);
+        $half-padding: rem(8);
+        padding: $padding;
+        border: 1px dotted #ccc;
+        border-radius: rem(4);
+        resize: vertical;
+    }
+    
+    label {
+        padding: $half-padding;
+        display: inline-block;
+        font-weight: bold;
+    }
+    
+    .actions input {
+        background-color: $bcit-blue;
+        color: $text-light;
+        padding: $half-padding;
+        border-radius: rem(4);
+        float: left;
+    }
+    
+    .actions input:hover {
+        background-color: rgba($bcit-blue, 0.9);
+    }
+
+    .select {
+        margin: $padding;
+        @extend %row-item;
+        background-color: $bcit-blue;
+        color: $text-light;
+        width: inherit;
+        border-radius: rem(4)
+    }
+}

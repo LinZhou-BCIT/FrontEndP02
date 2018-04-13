@@ -2,7 +2,6 @@
     $half-padding: rem(16);
     $padding: rem(32);
     padding: $half-padding;
-
     text-align: justify;
     background-color: $site-gray;
 
@@ -10,14 +9,12 @@
         padding: $half-padding;
         margin-bottom: $half-padding;
         background-color: rgba($site-white, 0.6);
-        border: 1px dotted $bcit-gray;
     }
 
     .requirements{
         padding: $half-padding;
         margin-bottom: $half-padding;
         background-color: rgba($site-white, 0.6);
-        border: 1px dotted $bcit-gray;
         div {
             padding: $padding;
         }
@@ -26,7 +23,6 @@
     .apply{
         padding: $half-padding;
         background-color: rgba($site-white, 0.6);
-        border: 1px dotted $bcit-gray;
         div {
             padding: $padding;
         }

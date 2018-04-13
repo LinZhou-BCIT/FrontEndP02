@@ -7,6 +7,7 @@
     <title>BCIT SSD Program - Contact Information</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="./scripts/menu.js"></script>
+    <script src="./scripts/popup.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -49,69 +50,86 @@
             </nav>
         </header>
         <main>
-            <div>
+            <div class="contactContainer">
                 <div>
-                    <h3>Helpful Links</h3>
-                    <ul>
-                        <li>Start your application.</li>
-                        <li>Check your application status.</li>
-                        <li>Find more information for international students.</li>
-                        <li>Find more information about financial aids.</li>
-                    </ul>
-                    <h3>Contact Information</h3>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>For admission and program inquiries:</th>
-                                <td>Phone: 604.412.7788<br/>
-                                Fax: 604.408.0921<br/>
-                                Email: HTP@bcit.ca</td>
-                            </tr>
-                            <tr>
-                                <th>Mailing address:</th>
-                                <td>HTP Programs<br/>
-                                BCIT Downtown Campus<br/>
-                                350 - 555 Seymour Street<br/>
-                                Vancouver, BC, Canada <br/>
-                                V6B 3H6</td>
-                            </tr>
-                            <tr>
-                                <th colspan="2"><a href="https://www.bcit.ca/about/downtown.shtml">Campus info, map, and directions</a></th>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <section class="infoBox">
+                            <h1>Helpful Links</h1>
+                            <ul>
+                                <li><a href="https://secure.bcit.ca/sis/apply/">Start your application.</a></li>
+                                <li><a href="https://secure.bcit.ca/sis/apply/">Check your application status.</a></li>
+                                <li><a href="https://www.bcit.ca/international/">Find more information for international students.</a></li>
+                                <li><a href="https://www.bcit.ca/finaid/">Find more information about financial aids.</a></li>
+                            </ul>
+                    </section>
+                    <section class="infoBox">
+                            <h1>Contact Information</h1>
+                                <div class="contactInfo">
+                                    <section class="box">
+                                        <b>For admission and program inquiries: </b>
+                                        <ul>
+                                            <li><b>Phone: </b>604.412.7788</li>
+                                            <li><b>Fax: </b>604.408.0921</li>
+                                            <li><b>Email: </b>HTP@bcit.ca</li>
+                                        </ul>
+                                    </section>
+                                    <section class="box">
+                                        <b>Mailing address: </b>
+                                        <ul>
+                                            <li>
+                                                HTP Programs - BCIT Downtown Campus<br/>
+                                                350 - 555 Seymour Street<br/>
+                                                Vancouver, BC, Canada <br/>
+                                                V6B 3H6
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            <p><a href="https://www.bcit.ca/about/downtown.shtml">Campus info, map, and directions</a></p>
+                    </section>
                 </div>
-                <form action="ThankyouPopup()" method="post">
-                    <div>
-                        <label for="firstname">First name</label>
-                        <input type="text" name="firstname" id="firstname" maxlength="80" placeholder="First Last" required>
-                    </div>
-                    <div>
-                        <label for="lastname">Last name</label>
-                        <input type="text" name="lastname" id="lastname" maxlength="80" placeholder="Last Last" required>
-                    </div>
-                    <div>
-                        <label for="email">Email</label>
-                        <input type="email" name="email" id="email" maxlength="80" placeholder="email@example.com" required>
-                    </div>
-                    <div>
-                         <label for="phone">Phone</label>
-                         <input type="text" name="phone" id="phone" maxlength="30" placeholder="(123) 456 - 7890">
-                    </div>
-                    <div>
-                        <label><input type="radio" name="status" value="CurrentStudent" required> Current Student</label><br>
-                        <label><input type="radio" name="status" value="ProsoectiveStudent"> Prosoective Student</label><br>
-                        <label><input type="radio" name="status" value="Instructor"> Instructor</label>
-                    </div>
-                    <div>
-                        <label for="comments">Questions or Comments</label>
-                        <textarea name="comments" id="comments" rows="5" cols="23" required></textarea>
-                    </div>
-                    <div class="actions">
-                        <input id="submit" type="submit" value="send &raquo; ">
-                    </div>
-                </form>
-                
+                <section class="infoBox">
+                    <h1>Contact Form</h1>
+                    <form onSubmit="alert('Thank you for your feedback.');" method="post" class="form">
+                        <div class="formLabel">
+                            <label for="firstname">First name</label>
+                        </div>
+                        <div class="formInput">
+                            <input type="text" name="firstname" id="firstname" maxlength="80" placeholder="First Last" required>
+                        </div>
+                        <div class="formLabel">
+                            <label for="lastname">Last name</label>
+                        </div>
+                        <div class="formInput">
+                            <input type="text" name="lastname" id="lastname" maxlength="80" placeholder="Last Last" required>
+                        </div>
+                        <div class="formLabel">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="formInput">
+                            <input type="email" name="email" id="email" maxlength="80" placeholder="email@example.com" required>
+                        </div>
+                        <div class="formLabel">
+                                <label for="phone">Phone</label>
+                        </div>
+                        <div class="formInput">
+                                <input type="text" name="phone" id="phone" maxlength="30" placeholder="(123) 456 - 7890">
+                        </div>
+                        <div class="select">
+                            <label><input type="radio" name="status" value="CurrentStudent" required> Current Student</label><br>
+                            <label><input type="radio" name="status" value="ProsoectiveStudent"> Prosoective Student</label><br>
+                            <label><input type="radio" name="status" value="Instructor"> Instructor</label>
+                        </div>
+                        <div>
+                            <label for="comments">Questions or Comments</label>
+                        </div>
+                        <div>
+                            <textarea name="comments" id="comments" rows="5" cols="23" required></textarea>
+                        </div>
+                        <div class="actions">
+                            <input id="submit" type="submit" value="send &raquo; ">
+                        </div>
+                    </form>
+                </section>
             </div>
         </main>
         <footer>
