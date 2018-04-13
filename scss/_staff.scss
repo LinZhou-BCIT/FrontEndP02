@@ -1,0 +1,77 @@
+.staff {
+    padding: rem(16);
+    background-color: #eee;
+
+    h1 {
+        @include flatten();
+        color: $text-med;
+        text-align: center;
+        text-transform: uppercase;
+        padding: rem(16) 0;
+    }
+
+    .faculty, .administration {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        h2 {
+            @include flatten();
+            width: 100%;
+            color: $text-light;
+            background-color: $bcit-blue;
+            padding: rem(6) rem(10); 
+            margin-bottom: rem(10); 
+        }
+        .person {
+            width: 49.5%;
+            padding: rem(20);
+            margin-right: 1%;
+            margin-bottom: rem(10);
+
+            &:nth-child(odd) {
+                margin-right: 0;
+            }
+            background-color: $site-white;
+
+            h3, p {
+                @include flatten();
+                line-height: 1.4;
+                color: $text-med;
+            }
+            p {
+                font-size: rem(14);
+            }
+            // so that empty fields still takes up space
+            p:empty {
+                &:after {
+                    content:"";
+                    display:inline-block;
+                    width:0px;
+                }
+            }
+            .role {
+                font-style: italic;
+            }
+            .email {
+                color: $bcit-blue;
+            }
+        }
+    }
+
+    @include mq($tabletPortrait){
+        .faculty, .administration{
+            h2 {
+                margin-bottom: 0;
+            }
+            .person {
+                width: 100%;
+                margin: 0;
+            }
+
+            .person:nth-of-type(even) {
+                background-color: #DEEAEE;
+            }
+        }
+    }
+}
