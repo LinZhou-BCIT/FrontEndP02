@@ -9,10 +9,27 @@ h1, h2, h3 {
 }
 
 section h1 {
-    border-left: 5px solid $site-yellow;
+    border-left: 10px solid $site-yellow;
     padding-left: 5px;
+    //background-color: rgba($site-yellow, 0.4);
 }
+
+
+section h3 {
+    border-left: 10px solid rgba($site-yellow, 0.5);
+    padding-left: 5px;
+    //background-color: rgba($site-yellow, 0.2);
+}
+
 
 main li {
     line-height: 1.8;
+}
+
+main a:link {
+    color: $bcit-navy;
+}
+
+main a:visited {
+    color: $bcit-orange;
 }
