@@ -120,10 +120,4 @@ document.addEventListener("DOMContentLoaded", function(){
         let todayDiv = document.querySelector('.today');
         todayDiv.scrollIntoView({behavior: 'smooth'});
     }
-
-    let toTopBtn = document.querySelector('.to-top-btn');
-    let header = document.querySelector('header');
-    toTopBtn.onclick = function() {
-        header.scrollIntoView({behavior: 'smooth'});
-    }
 });
