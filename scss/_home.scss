@@ -1,0 +1,60 @@
+.home-header {
+    position: relative;
+    z-index: 99;
+    background-color: rgba($site-white, 0.7);
+}
+
+.home-banner {
+    position: relative;
+    margin-top: rem(-152);
+    h1 {
+        @include flatten();
+        position: absolute;
+        display: block;
+        bottom: 20%;
+        left: 40%;
+        right: 10%;
+        line-height: 1.4;
+        color: rgba($site-white, 0.9);
+    }
+
+    img {
+        display: block;
+    }
+
+    @include mq($tabletLandscape) {
+        h1 {
+            font-size: 3.1vw;
+        }
+    }
+
+    @include mq($tabletPortrait) {
+        margin-top: rem(-120);
+        h1 {
+            left: 20%;
+            font-size: rem(24);
+        }
+    }
+
+    @include mq($phoneLandscape){
+        margin-top: rem(-90);
+    }
+
+    @include mq($phonePortrait){
+        margin-top: 0;
+        h1 {
+            left: 10%;
+            bottom: 10%;
+        }
+    }
+
+}
+
+.homepage-container {
+    padding: rem(16);
+    background-color: $bg-lightgray;
+    section {
+        background-color: $site-white;
+        padding: rem(32);
+    }
+}
