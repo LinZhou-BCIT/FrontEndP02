@@ -1,28 +1,19 @@
 .overviewContainer {
-    $half-padding: rem(16);
-    $padding: rem(32);
-    padding: $half-padding;
-    text-align: justify;
-    background-color: $site-gray;
+    @extend %main-container;
 
     .overview{
-        padding: $half-padding;
-        margin-bottom: $half-padding;
-        background-color: rgba($site-white, 0.6);
+        @extend %content-container;
     }
 
     .requirements{
-        padding: $half-padding;
-        margin-bottom: $half-padding;
-        background-color: rgba($site-white, 0.6);
+        @extend %content-container;
         div {
             padding: $padding;
         }
     }
 
     .apply{
-        padding: $half-padding;
-        background-color: rgba($site-white, 0.6);
+        @extend %content-container;
         div {
             padding: $padding;
         }
