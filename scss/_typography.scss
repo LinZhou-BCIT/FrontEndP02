@@ -11,6 +11,8 @@ h1, h2, h3 {
 section h1 {
     border-left: 10px solid $site-yellow;
     padding-left: 5px;
+    text-align: center;
+    align-self: center;
     //background-color: rgba($site-yellow, 0.4);
 }
 

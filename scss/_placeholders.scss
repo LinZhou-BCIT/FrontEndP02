@@ -76,7 +76,7 @@
     @include first-last-el-no-margin;
     margin-bottom: $half-padding;
     padding: $half-padding;
-    @include flex-layout-row;
+    //@include flex-layout-row;
     border: 1px dotted #ccc;
     border-radius: rem(8);
 }

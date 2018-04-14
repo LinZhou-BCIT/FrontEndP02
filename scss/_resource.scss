@@ -1,5 +1,12 @@
 .resourceContainer {
     @extend %main-container;
+    h1 {
+        @include flatten();
+        color: $text-med;
+        text-align: center;
+        text-transform: uppercase;
+        padding: rem(16) 0;
+    }
 
     .infoBox {
         @extend %content-container;
