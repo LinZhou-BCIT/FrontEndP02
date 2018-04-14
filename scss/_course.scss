@@ -1,0 +1,44 @@
+.courseContainer {
+    $half-padding: rem(16);
+    $padding: rem(32);
+    padding: $half-padding;  
+
+    background-color: $site-gray;
+
+    .courses {
+        padding: $half-padding;
+        margin-bottom: $half-padding;
+        background-color: rgba($site-white, 0.6);
+
+        li {
+            list-style: none;
+            margin: $half-padding;
+            padding: $half-padding;
+            @include flex-layout-row;
+            border: 1px dotted #ccc;
+            border-radius: rem(8);
+        }
+    }
+
+    
+    .infoBox{
+        padding: $half-padding;
+        margin-bottom: $half-padding;
+        background-color: rgba($site-white, 0.6);
+        p, p a {
+            height: $line-height;
+            text-align: center;
+        }
+        .contactInfo {
+            @include flex-layout-row;
+            .box {
+                @extend %row-item;
+                text-align: left;
+            }
+        }
+        section {
+            padding: $padding;
+            @include flex-layout-row;
+        }
+    }
+}
