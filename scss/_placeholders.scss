@@ -13,7 +13,7 @@
     padding: $padding;
     @include first-last-el-no-margin;
     border: 1px dotted #ccc;
-    border-radius: rem(8);
+    border-radius: rem($border-radius);
     @include mq($phoneLandscape){
         width: $one-col;
         margin-bottom: 8%;
@@ -21,4 +21,62 @@
             margin-bottom: 0;
         }
     }
+}
+
+// A basic two column style
+// that changes to one
+// column at phone widths
+%row-item {
+    width: $two-col;
+    padding: $padding;
+    @include first-last-el-no-margin;
+    border: 1px dotted #ccc;
+    border-radius: rem($border-radius);
+    @include mq($phoneLandscape){
+        width: $one-col;
+        margin-bottom: 8%;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+%form-row-item {
+    width: $two-col;
+    padding: $padding;
+    @include first-last-el-no-margin;
+    @include mq($phoneLandscape){
+        width: $one-col;
+        margin-bottom: 8%;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// main container
+%main-container {
+    width: $one-col;
+    padding: $half-padding;
+    background-color: $site-gray;
+    text-align: justify;
+    @include first-last-el-no-margin;
+}
+
+// content container
+%content-container {
+    padding: $half-padding;
+    margin-bottom: $half-padding;
+    background-color: rgba($site-white, 0.5);    
+    border-radius: rem($border-radius);
+}
+
+// card holder
+%horizantol-card-holder {
+    @include first-last-el-no-margin;
+    margin-bottom: $half-padding;
+    padding: $half-padding;
+    @include flex-layout-row;
+    border: 1px dotted #ccc;
+    border-radius: rem(8);
 }

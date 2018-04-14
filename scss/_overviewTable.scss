@@ -3,6 +3,10 @@
     padding: rem(16);
     margin-bottom: $half-padding;
 
+    border-collapse: collapse;
+    border-radius: rem($border-radius);
+    overflow: hidden;
+
     // Table Border
     $table-border: 1px solid $bcit-navy;
 

@@ -7,7 +7,6 @@
     <title>BCIT SSD Program - Contact Information</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <script src="./scripts/menu.js"></script>
-    <script src="./scripts/popup.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -51,9 +50,10 @@
         </header>
         <main>
             <div class="contactContainer">
+                <h1>Contact Us</h1>
                 <div>
                     <section class="infoBox">
-                            <h1>Helpful Links</h1>
+                            <h2>Helpful Links</h2>
                             <ul>
                                 <li><a href="https://secure.bcit.ca/sis/apply/">Start your application.</a></li>
                                 <li><a href="https://secure.bcit.ca/sis/apply/">Check your application status.</a></li>
@@ -62,10 +62,10 @@
                             </ul>
                     </section>
                     <section class="infoBox">
-                            <h1>Contact Information</h1>
+                            <h2>Contact Information</h2>
                                 <div class="contactInfo">
                                     <section class="box">
-                                        <b>For admission and program inquiries: </b>
+                                        <h4>For admission and program inquiries: </h4>
                                         <ul>
                                             <li><b>Phone: </b>604.412.7788</li>
                                             <li><b>Fax: </b>604.408.0921</li>
@@ -73,7 +73,7 @@
                                         </ul>
                                     </section>
                                     <section class="box">
-                                        <b>Mailing address: </b>
+                                        <h4>Mailing address: </h4>
                                         <ul>
                                             <li>
                                                 HTP Programs - BCIT Downtown Campus<br/>
@@ -88,45 +88,59 @@
                     </section>
                 </div>
                 <section class="infoBox">
-                    <h1>Contact Form</h1>
+                    <h2>Contact Form</h2>
                     <form onSubmit="alert('Thank you for your feedback.');" method="post" class="form">
-                        <div class="formLabel">
-                            <label for="firstname">First name</label>
+                        <div class="formRow">
+                            <div class="formLabel">
+                                <label for="firstname">First name</label>
+                            </div>
+                            <div class="formInput">
+                                <input type="text" name="firstname" id="firstname" maxlength="80" placeholder="First Last" required>
+                            </div>
                         </div>
-                        <div class="formInput">
-                            <input type="text" name="firstname" id="firstname" maxlength="80" placeholder="First Last" required>
+                        <div class="formRow">
+                            <div class="formLabel">
+                                <label for="lastname">Last name</label>
+                            </div>
+                            <div class="formInput">
+                                <input type="text" name="lastname" id="lastname" maxlength="80" placeholder="Last Last" required>
+                            </div>
                         </div>
-                        <div class="formLabel">
-                            <label for="lastname">Last name</label>
+                        <div class="formRow">
+                            <div class="formLabel">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="formInput">
+                                <input type="email" name="email" id="email" maxlength="80" placeholder="email@example.com" required>
+                            </div>
                         </div>
-                        <div class="formInput">
-                            <input type="text" name="lastname" id="lastname" maxlength="80" placeholder="Last Last" required>
+                        <div class="formRow">
+                            <div class="formLabel">
+                                    <label for="phone">Phone</label>
+                            </div>
+                            <div class="formInput">
+                                    <input type="text" name="phone" id="phone" maxlength="30" placeholder="(123) 456 - 7890">
+                            </div>
                         </div>
-                        <div class="formLabel">
-                            <label for="email">Email</label>
+                        <div class="formRow">
+                            <div class="select">
+                                <label><input type="radio" name="status" value="CurrentStudent" required> Current Student</label><br>
+                                <label><input type="radio" name="status" value="ProsoectiveStudent"> Prosoective Student</label><br>
+                                <label><input type="radio" name="status" value="Instructor"> Instructor</label>
+                            </div>
                         </div>
-                        <div class="formInput">
-                            <input type="email" name="email" id="email" maxlength="80" placeholder="email@example.com" required>
+                        <div class="formRow">
+                            <div>
+                                <label for="comments">Questions or Comments</label>
+                            </div>
+                            <div>
+                                <textarea name="comments" id="comments" rows="5" cols="23" required></textarea>
+                            </div>
                         </div>
-                        <div class="formLabel">
-                                <label for="phone">Phone</label>
-                        </div>
-                        <div class="formInput">
-                                <input type="text" name="phone" id="phone" maxlength="30" placeholder="(123) 456 - 7890">
-                        </div>
-                        <div class="select">
-                            <label><input type="radio" name="status" value="CurrentStudent" required> Current Student</label><br>
-                            <label><input type="radio" name="status" value="ProsoectiveStudent"> Prosoective Student</label><br>
-                            <label><input type="radio" name="status" value="Instructor"> Instructor</label>
-                        </div>
-                        <div>
-                            <label for="comments">Questions or Comments</label>
-                        </div>
-                        <div>
-                            <textarea name="comments" id="comments" rows="5" cols="23" required></textarea>
-                        </div>
-                        <div class="actions">
-                            <input id="submit" type="submit" value="send &raquo; ">
+                        <div class="formRow">
+                            <div class="actions">
+                                <input id="submit" type="submit" value="send &raquo; ">
+                            </div>
                         </div>
                     </form>
                 </section>

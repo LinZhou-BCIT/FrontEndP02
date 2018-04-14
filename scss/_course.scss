@@ -1,22 +1,11 @@
 .courseContainer {
-    $half-padding: rem(16);
-    $padding: rem(32);
-    padding: $half-padding;  
-
-    background-color: $site-gray;
+    @extend %main-container;
 
     .courses {
-        padding: $half-padding;
-        margin-bottom: $half-padding;
-        background-color: rgba($site-white, 0.6);
+        @extend %content-container;
 
         section {
-            list-style: none;
-            margin-bottom: $half-padding;
-            padding: $half-padding;
-            @include flex-layout-row;
-            border: 1px dotted #ccc;
-            border-radius: rem(8);
+            @extend %horizantol-card-holder;
         }
     }
 }

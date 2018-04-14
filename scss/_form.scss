@@ -1,26 +1,30 @@
 .form {
     input[type=text], input[type=email], select, textarea {
         width: 100%;
-        $padding: rem(16);
-        $half-padding: rem(8);
         padding: $padding;
         border: 1px dotted #ccc;
         border-radius: rem(4);
         resize: vertical;
+        float: left;
+        width: 75%;
     }
-    
+
     label {
         padding: $half-padding;
-        display: inline-block;
         font-weight: bold;
+        float: left;
+        width: 25%;
     }
     
     .actions input {
+        font-weight: bold;
         background-color: $bcit-blue;
         color: $text-light;
         padding: $half-padding;
-        border-radius: rem(4);
-        float: left;
+        margin-top: $half-padding;
+        border-radius: $border-radius;
+        float: right;
+        width: 25%;
     }
     
     .actions input:hover {
@@ -33,6 +37,22 @@
         background-color: $bcit-blue;
         color: $text-light;
         width: inherit;
-        border-radius: rem(4)
+        border-radius: $border-radius;
+        label {
+            float: none;
+        }
+    }
+
+    .formRow:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    @include mq($phoneLandscape) {
+        input[type=text], input[type=email], select, textarea, label, .actions input {
+            width: 100%;
+        }
+       
     }
 }
