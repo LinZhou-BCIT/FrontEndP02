@@ -24,6 +24,7 @@ header {
         padding: 0 rem(30);
         .school-name, h1, h2 {
             @include flatten;
+            font-family: $body-font;
         }
         .school-name {
             text-transform: uppercase;
@@ -54,6 +55,7 @@ header {
             padding: 0 rem(20);
             h1, h2{
                 font-size: 1.3em;
+                font-family: $heading-font-narrow;
             }
             .school-name {
                 display: none;

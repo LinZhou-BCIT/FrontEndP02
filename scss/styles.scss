@@ -21,24 +21,20 @@
 @import 'totop';
 @import 'nav-header';
 @import 'main';
-//@import 'banner';
-//@import 'section';
+@import 'footer';
+
 @import 'home';
+@import 'overview';
+@import 'overviewTable';
+@import 'course';
 @import 'schedule';
 @import 'students';
 @import 'staff';
-@import 'footer';
-//@import 'nav-footer';
-
-
-// Specialty Items
-
-@import 'overview';
-@import 'overviewTable';
+@import 'resource';
 @import 'contact';
 @import 'form';
-@import 'course';
-@import 'resource';
+
+
 
 
 

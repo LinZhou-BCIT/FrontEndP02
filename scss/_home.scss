@@ -48,6 +48,13 @@
         }
     }
 
+    @include mq(rem(375)){
+        margin-top: rem(-90);
+        h1 {
+            display: none;
+        }
+    }
+
 }
 
 .homepage-container {
