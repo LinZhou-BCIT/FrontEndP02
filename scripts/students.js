@@ -1,7 +1,13 @@
 document.addEventListener("DOMContentLoaded", function(){ 
-    dataUrl = "./working-files/students.json";
+    dataUrl = "https://api.jsonbin.io/b/5ad529bbf5d4cd62f4721001"
+    //dataUrl = "./working-files/students.json";
 
-    fetch(dataUrl)
+    fetch(dataUrl, {
+        headers: {
+            'secret-key': '$2a$10$rat/5tTRtPM.bmsfMTEha.anz6i2uMLObCBxDam6b.Aqet8kxgBgy'
+        },
+        method: 'GET'
+    })
     .then( data => {
         let promise = data.json()
         promise.then(promise =>

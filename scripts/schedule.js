@@ -1,9 +1,16 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    dataUrl = "./working-files/schedule.json";
+    dataUrl = "https://api.jsonbin.io/b/5ad39830003aec63328d456f/1"
+    // dataUrl = "./working-files/schedule.json";
 
-    fetch(dataUrl)
+    fetch(dataUrl, {
+        headers: {
+            'secret-key': '$2a$10$rat/5tTRtPM.bmsfMTEha.anz6i2uMLObCBxDam6b.Aqet8kxgBgy'
+        },
+        method: 'GET'
+    })
         .then( data => {
+            console.log(data);
             let promise = data.json()
             promise.then(promise =>
                 generateSchedule(promise)
@@ -11,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function(){
         }).catch( error => console.log("Error fetching data."));
     
     function generateSchedule(data){
-        //console.log(data);
         const monthNames = ["January", "February", "March", "April", "May", "June",
             "July", "August", "September", "October", "November", "December"];
         const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri"];
